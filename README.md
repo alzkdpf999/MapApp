@@ -15,10 +15,14 @@ MapApp은 식당, 카페, 술집에 대한 정보만들 다루어 가게에 위�
 ## 화면 구성 :camera:
 |로그인 화면|메인페이지|
 |-----|-----|
-![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/553bfc69-d5cc-4004-a8c1-82a8e319ea00) | ![image]() 
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/e92899dd-bf1a-440f-99a6-b2c2510815f2) | ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/ddcd2651-8498-4375-b9e8-a533ddf43d98) 
 |앱바 드로우|가게 리스트|
-![image]() | ![image]()
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/a2b3db17-0982-4294-877d-bbea1fabc7b0) | ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/8916501e-f0a9-4122-80c7-29756ac7e059)
 |가게 상세보기|가게 이미지모음|
-![image]() | ![image]()
-|위치 추적|선수명단 페이지|
-![image]()
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/7e6c2271-c8c6-489d-8e0f-c1abcd9c5ece) | ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/fcd5c99b-9f11-482b-94da-9b799a47c939)
+|장소 검색|위치 추적|
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/09f18c79-76b9-4abb-8153-45eb3b70c07b) |![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/df495eee-eb65-461e-824a-0218d5858194)
+
+
+# DB 구조
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/b8202ca8-9621-4823-84cd-abf73233b290)
