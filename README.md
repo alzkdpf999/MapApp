@@ -1,2 +1,2 @@
-# <div align=center> :[![Hits](https://github.com/alzkdpf999/oracle/assets/100851583/f6964dc6-3c7a-4d44-86ec-f6a7b6427c22)]:  찾아보자 [![Hits](https://github.com/alzkdpf999/oracle/assets/100851583/63e166de-9262-47ac-a719-953fdff3be3c)](https://hits.seeyoufarm.com)
-</div>
+[![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falzkdpf999%2FMapApp&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)
+
