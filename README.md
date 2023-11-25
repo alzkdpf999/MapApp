@@ -1,7 +1,7 @@
 
 
 
-# <div align=center> 💡찾아 보자:bulb: </div>
+# <div align=center> 💡찾아 보자:bulb: [![Hits](https://hits.seeyoufarm.com/api/count/incr/badge.svg?url=https%3A%2F%2Fgithub.com%2Falzkdpf999%2FMapApp&count_bg=%2379C83D&title_bg=%23555555&icon=&icon_color=%23E7E7E7&title=hits&edge_flat=false)](https://hits.seeyoufarm.com)</div>
 
 # <div align=center><img src="https://github.com/alzkdpf999/oracle/assets/100851583/b677baf8-8b47-4306-a124-88db3093f629" width="500" height="400"/></div>
 
@@ -14,7 +14,7 @@ MapApp은 식당, 카페, 술집에 대한 정보만들 다루어 가게에 위�
 
 ## 화면 구성 :camera:
 |로그인 화면|메인페이지(주변 검색)|
-|-----|-----|
+|:---:|:---:|
 ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/86fe0c10-c145-46eb-9cc0-5947e18c4f3d) | ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/7d04322b-1c7a-4d36-855e-5880cd4953dc) 
 |메인페이지(장소 검색)|앱바 드로우|
 ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/17aa2701-6b8d-432d-abbe-ffacef548b11) | ![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/efcec86f-ec39-4cf7-8492-4a65aaa7575d)
