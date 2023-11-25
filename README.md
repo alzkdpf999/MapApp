@@ -15,7 +15,7 @@ MapApp은 식당, 카페, 술집에 대한 정보만들 다루어 가게에 위�
 ## 화면 구성 :camera:
 |로그인 화면|메인페이지|
 |-----|-----|
-![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/75f9d0e7-e86e-4afc-aa7e-b837b228630d) | ![image]() 
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/553bfc69-d5cc-4004-a8c1-82a8e319ea00) | ![image]() 
 |앱바 드로우|가게 리스트|
 ![image]() | ![image]()
 |가게 상세보기|가게 이미지모음|
