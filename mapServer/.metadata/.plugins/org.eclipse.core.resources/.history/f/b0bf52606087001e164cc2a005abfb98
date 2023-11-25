@@ -1,0 +1,5 @@
+package com.example.map.service;
+
+public interface UserService {
+
+}

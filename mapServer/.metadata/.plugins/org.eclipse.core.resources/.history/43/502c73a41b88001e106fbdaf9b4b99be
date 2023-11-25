@@ -1,0 +1,72 @@
+package com.example.map.entity;
+
+import java.time.LocalDateTime;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.EntityListeners;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.JoinColumn;
+import javax.persistence.ManyToOne;
+import javax.persistence.SequenceGenerator;
+import javax.persistence.Table;
+
+import org.hibernate.annotations.DynamicInsert;
+import org.springframework.data.annotation.CreatedDate;
+import org.springframework.data.domain.Persistable;
+import org.springframework.data.jpa.domain.support.AuditingEntityListener;
+
+import lombok.AllArgsConstructor;
+import lombok.Builder;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@Builder
+@AllArgsConstructor
+@Table
+@SequenceGenerator(name = "place_seq_gen", sequenceName = "place_seq", allocationSize = 1)
+@EntityListeners(AuditingEntityListener.class)
+@DynamicInsert
+public class Place implements Persistable<String>{
+
+	@Id
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "place_id_seq_gen")
+	@Column
+	private Long id;
+
+	@Column(name = "place_id")
+	private String placeId;
+	@Column
+	private double lat;
+
+	@Column
+	private double lng;
+
+	@ManyToOne
+	@JoinColumn(name = "user_id")
+	private User user;
+
+	@CreatedDate
+	@Column(name = "create_date")
+	private LocalDateTime createDate;
+
+	@Column(name = "photo_reference")
+	private String photoReference;
+
+	@Column(name = "place_name")
+	private String placeName;
+	@Column
+	private Long rate;
+	@Column
+	private String type;
+
+	public boolean isNew() {
+		return false;
+	}
+
+}

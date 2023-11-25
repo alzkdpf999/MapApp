@@ -1,0 +1,38 @@
+{
+  "project_info": {
+    "project_number": "27423945078",
+    "project_id": "mapalarm-403003",
+    "storage_bucket": "mapalarm-403003.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:27423945078:android:be185159a589877ddc8a57",
+        "android_client_info": {
+          "package_name": "com.example.map"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "27423945078-pjt3bhdr99vu352cs1731je36rqo5ipc.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.map",
+            "certificate_hash": "0ad6f159446f674d9e24b722481dcbd6a5974c1b"
+          }
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyALtCyG00O5IH1vOI2PmzpU896WkKYcpFs"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

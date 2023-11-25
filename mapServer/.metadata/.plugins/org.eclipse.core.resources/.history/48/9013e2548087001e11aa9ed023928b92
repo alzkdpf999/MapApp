@@ -1,0 +1,13 @@
+package com.example.map.service;
+
+import java.util.List;
+
+import com.example.map.entity.Place;
+
+public interface PlaceService {
+	// 알람 설정한 가게들 저장하기
+	public void insertPlace(List<Place> places, Long userId);
+	
+	// 알람 설정한 가게들 불러오기
+	public List<Place> findPlaces(Long userId);
+}

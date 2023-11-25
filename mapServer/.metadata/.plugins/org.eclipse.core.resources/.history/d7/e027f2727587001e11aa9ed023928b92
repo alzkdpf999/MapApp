@@ -1,0 +1,16 @@
+package com.example.map.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+import org.springframework.data.repository.query.Param;
+
+import com.example.map.entity.User;
+
+public interface JpaUserRepository extends JpaRepository<User, Long> {
+	public User findByPlatform(String platform);
+
+	
+	// 유저 확인
+	@Query(value = "SELECT u.userId FROM User u where u.email = :email AND u.platform = :platform")
+	public Long findByEmailAndPlatform(@Param("email") String email, @Param("platform") String platform);
+}

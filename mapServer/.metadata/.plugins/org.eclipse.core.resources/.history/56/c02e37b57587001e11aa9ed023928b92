@@ -1,0 +1,9 @@
+package com.example.map.service;
+
+import com.example.map.entity.User;
+
+public interface UserService {
+	public User insertUsser(User user);
+
+	public Long findUser(String email, String platform);
+}

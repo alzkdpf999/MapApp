@@ -1,0 +1,31 @@
+package com.example.map;
+
+import javax.transaction.Transactional;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.map.repository.JpaUserRepository;
+import com.example.map.service.UserService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootTest
+@Transactional
+@Slf4j
+class MapServerApplicationTests {
+	@Autowired
+	private UserService u;
+	@Autowired
+	private JpaUserRepository j;
+
+	@Test
+	void contextLoads() {
+//		User user = User.builder().email("asd@naver.com").name("asd").platform("google").build();
+//		log.info("{}", j.save(user));
+//		log.info("{}", j.findAll().get(2));
+
+	}
+
+}

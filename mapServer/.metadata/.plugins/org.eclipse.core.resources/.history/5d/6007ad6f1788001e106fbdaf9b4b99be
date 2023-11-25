@@ -1,0 +1,39 @@
+package com.example.map.service;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.map.entity.Place;
+import com.example.map.entity.User;
+import com.example.map.repository.JpaPlaceRepository;
+import com.example.map.repository.JpaUserRepository;
+
+@Service
+public class PlaceServiceImpl implements PlaceService {
+	@Autowired
+	private JpaPlaceRepository placeRepository;
+	private JpaUserRepository userRepository;
+
+	// 알람 설정한 가게들 저장하기
+	@Transactional
+	public void insertPlace(List<Place> places, Long userId) {
+		Optional<User> user = userRepository.findById(userId);
+		List<Place> newPlace = new ArrayList<>();
+		for (Place place : places) {
+			place.setUser(user.get());
+			newPlace.add(place);
+		}
+		placeRepository.saveAll(newPlace);
+	}
+
+	public List<Place> findPlaces(Long userId) {
+		List<Place> places = placeRepository.findAllByUserId(userId);
+		return places;
+	}
+}

@@ -1,0 +1,37 @@
+package com.example.map;
+
+import javax.transaction.Transactional;
+
+import org.junit.jupiter.api.Test;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.boot.test.context.SpringBootTest;
+
+import com.example.map.entity.User;
+import com.example.map.repository.JpaUserRepository;
+import com.example.map.service.PlaceService;
+import com.example.map.service.UserService;
+
+import lombok.extern.slf4j.Slf4j;
+
+@SpringBootTest
+@Transactional
+@Slf4j
+class MapServerApplicationTests {
+	@Autowired
+	private UserService u;
+	@Autowired
+	private JpaUserRepository j;
+	@Autowired
+	private PlaceService p;
+
+	@Test
+	void contextLoads() {
+		User user = User.builder().email("ksa@ac.kr").name("ksa").platform("google").imgUrl("update?").name("asd")
+				.build();
+//		log.info("{}", j.save(user));
+		log.info("{},검색", p.findPlaces(2L));
+		
+	
+	}
+
+}

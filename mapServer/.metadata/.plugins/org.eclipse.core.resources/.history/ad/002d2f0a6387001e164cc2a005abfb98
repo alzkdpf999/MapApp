@@ -1,0 +1,9 @@
+package com.example.map.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.map.entity.Place;
+
+public interface JpaPlaceRepository extends JpaRepository<Place, String> {
+
+}

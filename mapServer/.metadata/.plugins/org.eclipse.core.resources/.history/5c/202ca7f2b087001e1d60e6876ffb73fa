@@ -1,0 +1,8 @@
+package com.example.map.dto;
+
+import com.example.map.entity.Place;
+
+public class httpDto {
+	String userId;
+	List<Place> place;
+}

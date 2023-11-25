@@ -1,0 +1,12 @@
+package com.example.map.repository;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+
+import com.example.map.entity.User;
+
+public interface JpaUserRepository extends JpaRepository<User, Long> {
+	public User findByPlatform(String platform);
+
+	// public Long findByEmailAndPlatform(String email, String platform);
+	public Long  findByEmailAndPlatform(String email);
+}

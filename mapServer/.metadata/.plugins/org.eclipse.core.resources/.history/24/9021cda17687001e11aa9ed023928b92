@@ -1,0 +1,28 @@
+package com.example.map.service;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.map.entity.User;
+import com.example.map.repository.JpaUserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private JpaUserRepository userRepository;
+
+	@Override
+	@Transactional
+	public void insertUsser(User user) {
+		Optional<User> userId = userRepository.findByEmailAndPlatform(user.getEmail(), user.getPlatform());
+		if (userId != null) {
+
+		} else {
+			userRepository.save(user);
+		}
+	}
+
+}

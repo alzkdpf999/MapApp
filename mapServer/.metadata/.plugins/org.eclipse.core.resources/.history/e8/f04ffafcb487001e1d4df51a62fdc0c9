@@ -1,0 +1,12 @@
+package com.example.map.controller;
+
+import org.springframework.stereotype.Controller;
+
+import lombok.extern.slf4j.Slf4j;
+
+@Controller
+@Slf4j
+@RequestMapping("/map")
+public class mapController {
+
+}

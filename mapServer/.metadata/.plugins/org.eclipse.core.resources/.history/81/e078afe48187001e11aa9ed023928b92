@@ -1,0 +1,13 @@
+package com.example.map.repository;
+
+import java.util.List;
+
+import org.springframework.data.jpa.repository.JpaRepository;
+import org.springframework.data.jpa.repository.Query;
+
+import com.example.map.entity.Place;
+
+public interface JpaPlaceRepository extends JpaRepository<Place, Long> {
+	@Query(value="SELECT p FROM Place p join e.user u where u.user_id = :userId")
+	public List<Place> findAllByUserId(@Param("userId")Long userId);
+}

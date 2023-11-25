@@ -1,0 +1,36 @@
+package com.example.map.entity;
+
+import java.sql.Date;
+
+import javax.persistence.Column;
+import javax.persistence.Entity;
+import javax.persistence.GeneratedValue;
+import javax.persistence.GenerationType;
+import javax.persistence.Id;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@Entity
+@NoArgsConstructor
+@AllArgsConstructor
+public class User {
+
+	@Id
+	@Column(name="user_id")
+	@GeneratedValue(strategy = GenerationType.SEQUENCE, generator = "user_seq_gen")
+	private Long userId;
+	
+	@Column
+	private String  id;
+	
+	@Column
+	private String platform;
+	
+	@Temporal(TemporalType.TIMESTAMP)
+	private Date regdate;
+}

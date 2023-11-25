@@ -1,0 +1,14 @@
+package com.example.map.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.map.repository.JpaPlaceRepository;
+
+@Service
+public class PlaceServiceImpl implements PlaceService {
+	@Autowired
+	private JpaPlaceRepository placeRepository;
+	
+	
+}

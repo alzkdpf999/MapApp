@@ -1,0 +1,20 @@
+package com.example.map.dto;
+
+import java.util.List;
+
+import com.example.map.entity.Place;
+
+import lombok.Data;
+import lombok.NoArgsConstructor;
+
+@Data
+@NoArgsConstructor
+public class httpDto {
+	String userId;
+	List<Place> place;
+
+	public httpDto(String userId, List<Place> place) {
+		this.userId = userId;
+		this.place = place;
+	}
+}

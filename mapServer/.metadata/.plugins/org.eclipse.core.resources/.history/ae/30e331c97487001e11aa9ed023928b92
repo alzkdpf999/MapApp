@@ -1,0 +1,26 @@
+package com.example.map.service;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.map.entity.User;
+import com.example.map.repository.JpaUserRepository;
+
+@Service
+public class UserServiceImpl implements UserService {
+
+	@Autowired
+	private JpaUserRepository userRepository;
+
+	@Override
+	public User test(String a) {
+
+		return userRepository.findByPlatform("google");
+	}
+
+	public Long findUser(String email, String platform) {
+		Long userId = userRepository.findByEmailAndPlatform(email,platform);
+
+		return userId;
+	}
+}

@@ -1,0 +1,6 @@
+package com.example.map.dto;
+
+public class httpDto {
+	String userId;
+	List<Place> place;
+}

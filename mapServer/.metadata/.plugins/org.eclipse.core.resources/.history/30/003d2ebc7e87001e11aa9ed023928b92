@@ -1,0 +1,25 @@
+package com.example.map.service;
+
+import java.util.Optional;
+
+import javax.transaction.Transactional;
+
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
+
+import com.example.map.entity.User;
+import com.example.map.repository.JpaPlaceRepository;
+import com.example.map.repository.JpaUserRepository;
+
+@Service
+public class PlaceServiceImpl implements PlaceService {
+	@Autowired
+	private JpaPlaceRepository placeRepository;
+	private JpaUserRepository userRepository;
+
+	@Transactional
+	public void insertPlace(List<Place> places,Long userId) {
+		Optional<User> user = userRepository.findById(userId);
+	
+	}
+}
