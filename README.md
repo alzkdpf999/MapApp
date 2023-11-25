@@ -15,7 +15,7 @@ MapApp은 식당, 카페, 술집에 대한 정보만들 다루어 가게에 위�
 ## 화면 구성 :camera:
 |로그인 화면|메인페이지|
 |-----|-----|
-![image](https://github.com/alzkdpf999/oracle/assets/100851583/41c23bbe-7a94-4071-b994-16092b0ac53c) | ![image](https://github.com/alzkdpf999/oracle/assets/100851583/5c665479-8f32-4d5b-bc64-ff23d2396d06) 
+![image](https://github.com/songhunhwa/songhunhwa.github.com/assets/100851583/75f9d0e7-e86e-4afc-aa7e-b837b228630d) | ![image](https://github.com/alzkdpf999/oracle/assets/100851583/5c665479-8f32-4d5b-bc64-ff23d2396d06) 
 |앱바 드로우|가게 리스트|
 ![image](https://github.com/alzkdpf999/oracle/assets/100851583/b921e3e8-31fc-4c3e-8532-b927df459e7b) | ![image](https://github.com/alzkdpf999/oracle/assets/100851583/8dc3b7ec-a7c9-4477-aa50-97284006f4f9)
 |가게 상세보기|가게 이미지모음|
