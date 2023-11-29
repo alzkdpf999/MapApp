@@ -55,11 +55,12 @@ class LocationWidgetUtil {
     Map<String, List<String>> map = {};
     int dayOfWeek = 0;
     List<dynamic> weekDetails = [];
-    if (detail.getOpenClose != "empty") {
+    if (detail.getOpenClose != "empty" && detail.getWeekend.isNotEmpty) {
       map = _buildweekdayMap(detail.getWeekend);
       dayOfWeek = now.weekday - 1;
       weekDetails = weekParse(map);
     }
+
     num starRate = ratingStar(detail.getRating);
     double width = MediaQuery.of(context).size.width;
     double height = MediaQuery.of(context).size.height;
@@ -172,7 +173,7 @@ class LocationWidgetUtil {
                         mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                         children: [
                           _buildContainer(width, height, MyFlutterApp.clock,
-                              detail.openClose),
+                              detail.getOpenClose,soonClose: weekDetails.isEmpty ? null : weekDetails[1]),
                           _buildContainer(
                               width,
                               height,
@@ -202,7 +203,7 @@ class LocationWidgetUtil {
                               style: TextStyle(
                                   color: detail.getOpenClose == "true"
                                       ? weekDetails[1]
-                                      : Colors.red,
+                                      : const Color(0xffff1010),
                                   fontWeight: FontWeight.bold),
                             ),
                             initiallyExpanded: false,
@@ -330,7 +331,7 @@ class LocationWidgetUtil {
               )
             : const Icon(
                 MyFlutterApp.phonelink_erase,
-                color: Colors.red,
+                color: Color(0xffff1010),
               ),
         onPressed: () {
           if (number.isNotEmpty) {
@@ -365,7 +366,7 @@ class LocationWidgetUtil {
 
   /// 반복되는  전화, 시간, 경로 컨테이너
   Container _buildContainer(
-      double width, double height, IconData icon, dynamic type) {
+      double width, double height, IconData icon, dynamic type,{Color? soonClose}) {
     bool checkType = type is String;
     return Container(
         width: width / 5,
@@ -380,7 +381,7 @@ class LocationWidgetUtil {
                 child: Icon(
                 icon,
                 color: type == "true"
-                    ? const Color(0xff5aff5a)
+                    ? (soonClose ?? Colors.green)
                     : (type == "empty"
                         ? Colors.white
                         : const Color(0xffff1010)),
@@ -501,6 +502,7 @@ class LocationWidgetUtil {
   GestureDetector _buildListGesture(BuildContext context, double width,
       double height, Place place, var detailPlace) {
     num starRate = ratingStar(place.getRating);
+
     return GestureDetector(
       onTap: () async {
         Navigator.pop(context);
@@ -559,7 +561,7 @@ class LocationWidgetUtil {
                                 child: Icon(MyFlutterApp.clock,
                                     size: 20,
                                     color: place.getOpenClose == "true"
-                                        ? const Color(0xff5aff5a)
+                                        ? Colors.green
                                         : const Color(0xffff1010)),
                               ),
                               const SizedBox(
@@ -567,9 +569,9 @@ class LocationWidgetUtil {
                               ),
                               place.getOpenClose == "true"
                                   ? const Text(
-                                      "영업 중",
+                                "영업 중",
                                       style:
-                                          TextStyle(color: Color(0xff5aff5a)),
+                                          TextStyle(color: Colors.green),
                                     )
                                   : const Text(
                                       "영업 종료",
@@ -746,7 +748,7 @@ class LocationWidgetUtil {
 
 
       if (soonToClose) {
-        return ["곧 영업종료 ${map[weekday]![soonIndex]}", Colors.deepPurple]; // 고치기
+        return ["곧 영업종료 ${map[weekday]![soonIndex]}", const Color(0xFFFF4500)]; // 고치기
       } else {
 
         if (openIndex == -1) {

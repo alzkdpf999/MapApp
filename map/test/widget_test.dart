@@ -19,10 +19,8 @@ import 'package:html/dom.dart' as dom;
 import 'package:html/parser.dart' as parser;
 
 void main() async {
+List<dynamic> test = [];
 
- const Distance distance = Distance();
- // double meter = distance.as(LengthUnit.Kilometer,LatLng(37.64820, 127.0623),LatLng(37.64318, 127.0652));
- double meter = distance(LatLng(37.64820, 127.0623),LatLng(37.64820, 127.0623));
+print(test.isEmpty);
 
- print(meter/1000);
 }

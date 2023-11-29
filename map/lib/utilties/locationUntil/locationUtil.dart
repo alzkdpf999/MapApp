@@ -201,6 +201,7 @@ class LocationUtil {
           markerId: MarkerId(cluster.getId()),
           position: cluster.location,
           onTap: () async {
+            log("${cluster.items.first}");
             if (cluster.items.length > 1) {
               await locationWidgetUtil.buildShowModalBottomSheet(
                   context,
